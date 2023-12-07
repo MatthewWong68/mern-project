@@ -18,7 +18,6 @@ app.get('/', (req, res) => {
     res.send('Hello to Memories API');
 });
 
-// const CONNECTION_URL = 'mongodb+srv://mattwongmernproj:mattwongmernproj@cluster0.ndvzp.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
 const PORT = process.env.PORT || 5000
 
 mongoose.connect(process.env.CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true })
@@ -27,6 +26,5 @@ mongoose.connect(process.env.CONNECTION_URL, { useNewUrlParser: true, useUnified
 
 // console.log("still alive")
 // console.log(mongoose)
-// console.log("app:", app.listen(PORT, () => console.log(`Server running on port: ${PORT}`)))
 
 mongoose.set('useFindAndModify', false);
